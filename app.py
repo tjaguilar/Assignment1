@@ -1,5 +1,5 @@
 import streamlit as st
-
+#Sets the page configuration
 st.set_page_config(
     page_title="NBA Scoring Vault",
     page_icon="🏀",
@@ -7,9 +7,11 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
+#Displays title of page
 st.title("🏀 NBA Scoring Vault")
 st.caption("Explore the highest individual scoring games in NBA regular-season history.")
 
+#Shows navigation to other apps
 with st.sidebar:
     st.header("Navigation")
     st.write("Use the pages above to explore records and player profiles.")
@@ -17,7 +19,7 @@ with st.sidebar:
     st.markdown("**Dataset:** 101 high-scoring NBA games")
     st.markdown("**Scope:** regular-season single-game scoring")
     st.markdown("**API:** Open Library, no authentication required")
-
+#Explains the problem the app addresses
 st.subheader("The problem")
 st.write(
     "Basketball fans and students often encounter single-game scoring records as isolated "
@@ -27,6 +29,7 @@ st.write(
     "individual players without digging through separate lists."
 )
 
+#Describes the target audience
 st.subheader("Who is this for?")
 c1, c2, c3 = st.columns(3)
 with c1:
@@ -36,6 +39,7 @@ with c2:
 with c3:
     st.metric("Interactive pages", "3")
 
+#Explains the rationale behind the page structure
 st.subheader("Why this page structure?")
 st.markdown(
     """
@@ -44,7 +48,7 @@ st.markdown(
 - **Player Spotlight:** focuses on one player and adds related reading through a live API.
 """
 )
-
+#Provides additional notes on the data and sources
 with st.expander("Data and source notes"):
     st.write(
         "The included CSV contains 101 high-scoring NBA regular-season performances. "
